@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phani's Portfolio</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        .borders{
+            border: 0px solid red;
+        }
+        .header_div{
+            position: sticky;
+            width: 100%;
+            height: 100px;
+            min-height: 70px;
+            background-color:#fff;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px 1px #C7D3FC;
+        }
+        .header_div h1{
+            padding-left: 30px;
+            min-width: 300px;
+        }
+        .logo_img{
+            height: 130px;
+            width: 130px;
+            margin-left: 30px;
+        }
+        .logo_img img{
+           height: 100%;
+           background-position: center;
+           border-radius: 60px;
+           box-shadow: 0px 0px 15px 10px lavender
+        }
+        .nav1{
+            min-width: 445px;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .end_nav{
+            width: 30%;
+        }
+        .button_type1{
+            height: 70px;
+            min-width: 130px;
+            font-family:'Merriweather' ;
+            border: 1px solid lavender;
+            background-color: white;
+            transition-duration: 0.3s;
+        }
+        .button_type1:hover{
+            background-color: lavender;
+            box-shadow: 0px 0px 15px 10px lavenderblush;
+            cursor: pointer;
+        }
+        .button_type1_nav{
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        .button_type1_nav:hover{
+            margin-top: 0px;
+            box-shadow: 0px 0px 15px 10px lavenderblush;
+            height: 100px;
+            background-color: lavender;
+            cursor: pointer;
+        }
+        .button_type2{
+            color: red;
+            height: 70px;
+            min-width: 130px;
+            font-weight: 400;
+            
+            font-family:'Merriweather' ;
+            border: 1px solid red;
+            background-color: white;
+            transition-duration: 0.3s;
+        }
+        .button_type2:hover{
+            background-color: #FF6949;
+            color: white;
+            box-shadow: 0px 0px 15px 10px lavenderblush;
+            cursor: pointer;
+        }
+
+        .button_type3{
+            color: #82C66D;
+            height: 70px;
+            min-width: 130px;
+            font-weight: 400;
+            font-family:'Merriweather' ;
+            font-weight: 400;
+            border-radius: 5px 0px;
+            border: 1px solid #82C66D;
+            background-color: white;
+            transition-duration: 0.3s;
+            font-size: 15px;
+        }
+        .button_type3:hover{
+            border: 1px solid white ;
+            background-color: #82C66D;
+            color: white;
+        }
+        .button_type2_nav{
+            margin-top: 15px;
+            margin-left: 10px;
+            border: 1px solid red;
+            border-radius: 4px;
+        }
+        .button_type2_nav:hover{
+            
+            margin-top: 0px;
+            box-shadow: 0px 0px 15px 10px lavenderblush;
+            height: 100px;
+            background-color: #FF6949;
+            cursor: pointer;
+        }
+
+        .main_body1{
+            clear: both;
+            height: 83vh ;
+            width: 100%;
+            overflow-y: scroll;
+        }
+        .banner1{
+            margin-top: 30px;
+            display: flex;
+            min-height:400px;
+            justify-content: center;
+        }
+        .banner_pic{
+            margin-left: 50px;
+            height: 380px;
+            width: 380px;
+            margin: 5px;
+            transition-duration: 0.3s;
+        }
+        .banner_pic img{
+            
+            height: 100%;
+            border-radius: 7px;
+            box-shadow: 0px 10px 5px 2px #D5C7FC;
+            transition-duration: 0.3s;
+        }
+        .banner_pic img:hover{
+            margin-right: 15px;
+            height: 400px;
+            box-shadow: 0px 10px 5px 2px lavender;
+        }
+
+
+        .banner_text{
+            height: 380px;
+            min-width: 550px;
+            width: 40%;
+            margin: 5px; 
+            border-radius: 5px;   
+            font-family: 'Merriweather';
+            transition-duration: 0.3s;
+           
+            border: 1px solid lavender;
+        }
+        .banner_text:hover{
+            width: 45%;
+            box-shadow: 0px 0px 7px 1px pink ;
+        }
+        .banner_text h1{
+            margin-left: 15px;
+        }
+        .banner_text p {
+            margin-left: 30px;
+            font-size: 15px;
+            line-height: 27px;
+        }
+        .skills_div{
+            clear: both;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid lavender;
+            font-family: 'Merriweather';
+        }
+        .skills_div{
+
+        }
+        .skills_div h1{
+            margin-left: 15px;
+            color: #62BD59;
+            font-size: 35px;
+            text-align: center;
+        }
+        .skills_div h1 hr{
+            width: 50%;
+
+        }
+        .skills_cards{
+            display: flex;
+            overflow-x: scroll;
+            padding-bottom: 30px;
+        }
+        .skill_card_1{
+            height: 400px;
+            min-width: 300px;
+            width: 300px;
+            border-radius: 3px;
+            border:1px solid #FFE6E6;
+            transition-duration: 0.2s;
+            box-shadow: 0px 0px 15px 1px lavender;
+            margin: 10px;
+            
+        }
+        .skill_card_1 p {
+            font-family: 'Merriweather';
+            font-size: 12px;
+            margin-left: 15px;
+            margin-right: 15px;
+            line-height: 20px;
+            margin-top: 25px;
+        }
+        .skill_card_1:hover{
+            box-shadow: 0px 0px 15px 1px #F4FAFB ;
+            background-color: #FFFCFC ;
+            padding: 10px;
+            height: 420px;  
+        }
+        .skill_img img{
+            height: 100%;
+            
+        }
+        .skill_img{
+            height: 120px;
+            margin: auto;
+            width: 120px;
+            margin-top: 30px;
+        }
+        .skill_card_1 h3{
+            font-size: 25px;
+            margin-left: 10px;
+            color: #6D85C6;
+        }
+        .review_top_projects{
+            clear: both;
+            margin-top: 15px;
+            min-height: 400px;
+        }
+        .review_top_projects h1{
+            font-family: 'Merriweather';
+            color: #4C8289;
+            text-align: center;
+        }
+        .review_top_projects h1 hr{
+            width: 50%;
+        }
+    </style>
+</head>
+<header>
+<div class="header_div borders">
+    <div class="logo_img borders">
+        <img  height="100%" src="{{url_for('static',filename='images/logo.png')}}" alt="">
+    </div>
+    <h1 style='font-family:"Madimi One", sans-serif;'>Phani's <small style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Portfolio</small></h1>
+    <div class="nav1 borders">
+        <button class="button_type1 button_type1_nav" >Home</button>
+        <button class="button_type1 button_type1_nav" >Skills</button>
+        <button class="button_type1 button_type1_nav" >Projects</button>
+
+    </div>
+    <div class="end_nav borders">
+        <button style="float: right;margin-right: 50px;" class="button_type1 button_type2_nav" >Contact Me</button>
+    </div>
+</div>
+
+</header>
+<body>
+    <div class="main_body1 borders">
+        <div class="banner1 borders">
+            <div class="banner_pic borders">
+                <img  src="{{url_for('static',filename='images/banner1.jpg')}}" alt="">
+            </div>
+            <div class="banner_text borders">
+                    <h1>About Me</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    </p>
+                    <button style="float: right; margin-right: 30px;" class="button_type2">Get in Touch! </button>
+            </div>
+        </div>
+        <!-- Skills Div Starts Here -->
+        <div class="skills_div borders">
+            <h1>
+                Skills
+                <hr>
+            </h1>
+            <!-- Skill Cards -->
+            <div class="skills_cards borders">
+                <div class="skill_card_1 borders">
+                    <h3>DataScience</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/datascience.png')}}" alt="">
+                   </div>
+                   <p>
+                    Data science is an interdisciplinary field that uses algorithms, procedures, and processes to examine large amounts of data in order to uncover hidden patterns.
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+                                                  <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>Android Studio</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/android_studio.png')}}" alt="">
+                   </div>
+                   <p>
+                    Android Studio is the official integrated development environment (IDE) for Android application development. 
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+                <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>Flask</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/flask.png')}}" alt="">
+                   </div>
+                   <p>
+                    Python Flask is a popular framework for building web applications and APIs in Python. 
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+                                 <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>Python</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/pylogo.png')}}" alt="">
+                   </div>
+                   <p>
+                    Python is a programming language that is high-level, interpreted, dynamic, and object-oriented. 
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+
+                                 <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>Java</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/java_png.png')}}" alt="">
+                   </div>
+                   <p>
+                    Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. 
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+                                 <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>PHP</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/php.png')}}" alt="">
+                   </div>
+                   <p>
+                    PHP is a general-purpose scripting language and interpreter that is widely used for web development.
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+                                                  <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>HTML</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/html.png')}}" alt="">
+                   </div>
+                   <p>
+                    HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages.
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+                                                  <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>CSS</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/CSS3.png')}}" alt="">
+                   </div>
+                   <p>
+                    Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                </div>
+                 <!-- Skill Card 1 End -->
+                                                  <!-- Skill Card 1 -->
+                <div class="skill_card_1 borders">
+                    <h3>JavaScript</h3>
+                   <div class="skill_img borders">
+                    <img src="{{url_for('static',filename = 'images/jslogo.png')}}" alt="">
+                   </div>
+                   <p>
+                    PavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods.
+                   </p>
+                   <div style="width: 130px ;margin: auto;" class="btn_div borders">
+                    <button class="button_type3">Projects</button>
+                   </div>
+                   
+                </div>
+                 <!-- Skill Card 1 End -->
+            </div>
+
+        </div>
+        <!-- Skills Div Ends Here -->
+        <div class="review_top_projects borders">
+            <h1>Crown Projects <hr></h1>
+            <div class="crown_projects_box borders">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
