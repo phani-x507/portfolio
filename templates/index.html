@@ -24,6 +24,7 @@
             display: flex;
             border-radius: 5px;
             box-shadow: 0px 0px 15px 1px #C7D3FC;
+            z-index: 2;
         }
 
         .header_div h1 {
@@ -47,13 +48,47 @@
         .nav1 {
             min-width: 445px;
             width: 50%;
-            align-items: center;
+            display: flex;
             justify-content: center;
+            align-items: center;
 
         }
 
+
         .end_nav {
             width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        .ltype1 {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: block;
+            font-family: 'Merriweather';
+            font-size: 14px;
+            border: 1px solid lavender;
+            background-color: white;
+            transition-duration: 0.3s;
+            margin-left: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .ltype1:hover {
+            margin-top: 0px;
+            box-shadow: 0px 0px 15px 10px lavenderblush;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: lavender;
+            cursor: pointer;
+        }
+        .ltype1:focus{
+            background-color: #62BD59;
+            color: white;
         }
 
         .button_type1 {
@@ -93,14 +128,18 @@
             font-family: 'Merriweather';
             border: 1px solid red;
             background-color: white;
-            transition-duration: 0.3s;
+            transition-duration: 0.1s;
         }
 
         .button_type2:hover {
             background-color: #FF6949;
             color: white;
-            box-shadow: 0px 0px 15px 10px lavenderblush;
             cursor: pointer;
+        }
+        .button_type2:active{
+            background-color: #F54949;
+            color: #FFFEFF;
+            border-color: white;
         }
 
         .button_type3 {
@@ -145,21 +184,46 @@
             width: 100%;
             position: fixed;
             overflow: scroll;
+            z-index: 1;
+            scroll-behavior: smooth;
+
+        }
+
+        .gintouch {
+            position: absolute;
+            top: 380px;
+            left: 73%;
+
         }
 
         .banner1 {
             margin-top: 30px;
             display: flex;
-            min-height: 400px;
+            min-height: 500px;
             justify-content: center;
+            align-items: center;
+            border: 1px solid #FAFDFF;
+            box-shadow: 0px 0px 15px 1px #FFFCFC;
         }
 
         .banner_pic {
             margin-left: 50px;
-            height: 380px;
-            width: 380px;
+            height: 430px;
+            width: 430px;
             margin: 5px;
             transition-duration: 0.3s;
+        }
+
+        .ltype2 {
+            border-color: #F54949;
+            color: #F54949;
+            margin-right: 50px;
+            display: inline-block;
+            margin-top: 15px;   
+        }
+        .ltype2:hover{
+            background-color: #F54949;
+            color: white;
         }
 
         .banner_pic img {
@@ -170,9 +234,10 @@
             transition-duration: 0.3s;
         }
 
-        .banner_pic img:hover {
+        .banner_pic:hover {
             margin-right: 15px;
-            height: 400px;
+            height: 500px;
+            width: 500px;
             box-shadow: 0px 10px 5px 2px lavender;
         }
 
@@ -229,6 +294,7 @@
         .skills_cards {
             display: flex;
             overflow-x: scroll;
+
             padding-bottom: 30px;
         }
 
@@ -295,31 +361,34 @@
         }
 
         .crown_projects_box {
-            display: flex;
+            /* display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: center; */
+            margin: auto;
         }
 
         .c_project1 {
-            height: 300px;
-            width: 500px;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            height: 280px;
+            width: 90%;
             font-family: 'Merriweather';
             font-size: 15px;
             border: 1px solid #CDE1E3;
             border-radius: 7px 0px;
             display: flex;
             background-color: #FAFDFF;
-            transition-duration: 0.3s;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-right: 20px;
-            margin-left: 60px;
+            transition-duration: 0.1s;
+            /* margin: 7px 0px 7px 0px; */
             padding: 10px;
             justify-content: center;
         }
-
         .c_project1:hover {
+            background-color: #F54949;
+            height: 290px;
+            color: white;
             cursor: pointer;
             border-radius: 0px 15px;
             box-shadow: 0px 0px 15px 0px lavender;
@@ -340,24 +409,39 @@
 
         .cp_img {
 
-            height: 150px;
-            width: 150px;
+            height: 320px;
+            width: 320px;
             position: relative;
+            top: -20px;
             left: -65px;
-            border-radius: 50px;
-            margin-top: 55px;
+            border-radius: 10px;
+
         }
 
         .cp_img img {
 
             height: 100%;
             width: 100%;
+            border-radius: 10px;
         }
 
         .cp_info_div {
             position: relative;
             left: -40px;
-            width: 450px;
+            width: 90%;
+            overflow: hidden;
+        }
+
+        .cp_info_div h3 {
+            font-size: 35px;
+            text-shadow: 2px 2px 2px grey;
+
+        }
+
+        .cp_info_div p {
+            line-height: 0.3in;
+            font-size: 17px;
+            padding: 10px;
         }
 
         .cp_info_div button {
@@ -372,7 +456,7 @@
             display: flex;
             align-content: center;
             justify-content: center;
-            background-color: #FFFEFF  ;
+            background-color: #FFFEFF;
             border: 1px solid #C1A5D6;
             border-radius: 15px;
         }
@@ -394,20 +478,25 @@
             font-family: 'Merriweather';
             padding: 15px;
         }
+
         .contacts_form table p {
             color: black;
         }
-        .contacts_form p{
+
+        .contacts_form p {
             color: #4C8289;
             font-size: 16px;
         }
+
         .info_contacts_1 {
             display: flex;
             margin: 10px 0px 10px 0px;
         }
-        .info_contacts_1 img{
+
+        .info_contacts_1 img {
             border-radius: 50px;
         }
+
         .info_c_t {
             height: 100%;
             width: 100%;
@@ -422,15 +511,22 @@
             margin-left: 15px;
 
         }
-        .cust_inp1{
+
+        .cust_inp1 {
             height: 35px;
             width: 60%;
             border: 1px solid transparent;
-            border-bottom: 2px solid #F54949 ;
+            border-bottom: 2px solid #F54949;
             margin: 0px 0px 15px 0px;
             font-size: 15px;
-            font-family: 'Merriweather',sans-serif;
+            font-family: 'Merriweather', sans-serif;
+            outline: 0;
+            transition-duration: 0.2s;
         }
+        .cust_inp1:focus{
+            border-bottom: 2px solid #62BD59;
+        }
+        
     </style>
 </head>
 <header>
@@ -441,13 +537,14 @@
         <h1 style='font-family:"Madimi One", sans-serif;'>Phani's <small
                 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Portfolio</small></h1>
         <div class="nav1 borders">
-            <button class="button_type1 button_type1_nav">Home</button>
-            <button class="button_type1 button_type1_nav">Skills</button>
-            <button class="button_type1 button_type1_nav">Projects</button>
+            <a class="ltype1" id="link" href="#about_me">Home</a>
+            <a class="ltype1" id="link" href="#skills_div">Skills</a>
+            <a class="ltype1" id="link" href="#review_top_projects">Project</a>
 
         </div>
         <div class="end_nav borders">
-            <button style="float: right;margin-right: 50px;" class="button_type1 button_type2_nav">Contact Me</button>
+
+            <a class="ltype1 ltype2" href="#contact_me" style="" class="button_type1 button_type2_nav">Contact Me</a>
         </div>
     </div>
 
@@ -455,7 +552,7 @@
 
 <body>
     <div class="main_body1 borders">
-        <div class="banner1 borders">
+        <div id="about_me" class="banner1 borders">
             <div class="banner_pic borders">
                 <img src="{{url_for('static',filename='images/banner1.jpg')}}" alt="">
             </div>
@@ -468,99 +565,37 @@
                     leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
                     with the release of Letraset sheets containing Lorem Ipsum passages,
                 </p>
-                <button style="float: right; margin-right: 30px;" class="button_type2">Get in Touch! </button>
+                <button style=" margin-right: 30px;" class="button_type2 gintouch">Get in Touch! </button>
             </div>
         </div>
 
         <!-- Crown Projects Starts Here -->
-        <div class="review_top_projects borders">
+        <div id="review_top_projects" class="review_top_projects borders">
             <h1>Crown Projects
                 <hr>
             </h1>
-            <div class="crown_projects_box borders">
+            <div id="crown_projects" class="crown_projects_box borders">
                 <!-- Project1 Starts Here -->
-                <div style="padding: 10px;" class="c_project1 borders">
+                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
 
 
                     <section>
                         <div class="cp_img borders">
-                            <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
+                            <img src="{{url_for('static',filename='images/tms.png')}}" alt="">
                         </div>
                     </section>
                     <div class="cp_info_div borders">
                         <h3>Transaction Management System
                             <hr width="70%">
                         </h3>
-                        <p>A Simple Transaction Management System Application designed for Small Scale business People
-                            to view and analyse their Transactions.</p>
-                        <div style="width: 150px;margin: auto;">
-                            <button class="button_type1">Review</button>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- Project1 Ends Here -->
-                <!-- Project1 Starts Here -->
-                <div style="padding: 10px;" class="c_project1 borders">
-
-                    <section>
-                        <div class="cp_img borders">
-                            <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
-                        </div>
-                    </section>
-                    <div class="cp_info_div borders">
-                        <h3>Transaction Management System
-                            <hr width="70%">
-                        </h3>
-                        <p>A Simple Transaction Management System Application designed for Small Scale business People
-                            to view and analyse their Transactions.</p>
-                        <div style="width: 150px;margin: auto;">
-                            <button class="button_type1">Review</button>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- Project1 Ends Here -->
-                <!-- Project1 Starts Here -->
-                <div style="padding: 10px;" class="c_project1 borders">
-
-                    <section>
-                        <div class="cp_img borders">
-                            <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
-                        </div>
-                    </section>
-                    <div class="cp_info_div borders">
-                        <h3>Transaction Management System
-                            <hr width="70%">
-                        </h3>
-                        <p>A Simple Transaction Management System Application designed for Small Scale business People
-                            to view and analyse their Transactions.</p>
-                        <div style="width: 150px;margin: auto;">
-                            <button class="button_type1">Review</button>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- Project1 Ends Here -->
-                <!-- Project1 Starts Here -->
-                <div style="padding: 10px;" class="c_project1 borders">
-
-                    <section>
-                        <div class="cp_img borders">
-                            <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
-                        </div>
-                    </section>
-                    <div class="cp_info_div borders">
-                        <h3>Transaction Management System
-                            <hr width="70%">
-                        </h3>
-                        <p>A Simple Transaction Management System Application designed for Small Scale business People
-                            to view and analyse their Transactions.</p>
-                        <div style="width: 150px;margin: auto;">
-                            <button class="button_type1">Review</button>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,</p>
+                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                            <button class="button_type2">Review</button>
                         </div>
 
                     </div>
@@ -568,27 +603,167 @@
                 </div>
                 <!-- Project1 Ends Here -->
                                 <!-- Project1 Starts Here -->
-                                <div style="padding: 10px;" class="c_project1 borders">
+                                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
+
 
                                     <section>
                                         <div class="cp_img borders">
-                                            <img src="{{url_for('static',filename='images/logo.png')}}" alt="">
+                                            <img src="{{url_for('static',filename='images/spd.png')}}" alt="">
                                         </div>
                                     </section>
                                     <div class="cp_info_div borders">
-                                        <h3>Transaction Management System
+                                        <h3>Spotify Data Analysis
                                             <hr width="70%">
                                         </h3>
-                                        <p>A Simple Transaction Management System Application designed for Small Scale business People
-                                            to view and analyse their Transactions.</p>
-                                        <div style="width: 150px;margin: auto;">
-                                            <button class="button_type1">Review</button>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                                            passages,</p>
+                                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                                            <button class="button_type2">Review</button>
                                         </div>
                 
                                     </div>
                 
                                 </div>
                                 <!-- Project1 Ends Here -->
+                                                <!-- Project1 Starts Here -->
+                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
+
+
+                    <section>
+                        <div class="cp_img borders">
+                            <img src="{{url_for('static',filename='images/netpng.png')}}" alt="">
+                        </div>
+                    </section>
+                    <div class="cp_info_div borders">
+                        <h3>Cable Network Management System 
+                            <hr width="70%">
+                        </h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,</p>
+                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                            <button class="button_type2">Review</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Project1 Ends Here -->
+                                <!-- Project1 Starts Here -->
+                                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
+
+
+                                    <section>
+                                        <div class="cp_img borders">
+                                            <img src="{{url_for('static',filename='images/tms.png')}}" alt="">
+                                        </div>
+                                    </section>
+                                    <div class="cp_info_div borders">
+                                        <h3>Transaction Management System with Face Verification
+                                            <hr width="70%">
+                                        </h3>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                                            passages,</p>
+                                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                                            <button class="button_type2">Review</button>
+                                        </div>
+                
+                                    </div>
+                
+                                </div>
+                                <!-- Project1 Ends Here -->
+                                                <!-- Project1 Starts Here -->
+                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
+
+
+                    <section>
+                        <div class="cp_img borders">
+                            <img src="{{url_for('static',filename='images/bookstore.png')}}" alt="">
+                        </div>
+                    </section>
+                    <div class="cp_info_div borders">
+                        <h3>Book Store Web Application
+                            <hr width="70%">
+                        </h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,</p>
+                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                            <button class="button_type2">Review</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Project1 Ends Here -->
+                
+                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
+
+
+                    <section>
+                        <div class="cp_img borders">
+                            <img src="{{url_for('static',filename='images/todo.png')}}" alt="">
+                        </div>
+                    </section>
+                    <div class="cp_info_div borders">
+                        <h3>TO DO Application
+                            <hr width="70%">
+                        </h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,</p>
+                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                            <button class="button_type2">Review</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Project1 Ends Here -->
+                <div id="c_project1" style="padding: 10px;" class="c_project1 borders">
+
+
+                    <section>
+                        <div class="cp_img borders">
+                            <img src="{{url_for('static',filename='images/cbt.png')}}" alt="">
+                        </div>
+                    </section>
+                    <div class="cp_info_div borders">
+                        <h3>Assess Nebula(Basic Computer-Based Testing Application)
+                            <hr width="70%">
+                        </h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,</p>
+                        <div style="width: 150px;margin: auto;position: absolute;top: 180px;left: 45%;right: 50%;">
+                            <button class="button_type2">Review</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Project1 Ends Here -->
+                
 
             </div>
         </div>
@@ -597,7 +772,7 @@
 
 
         <!-- Skills Div Starts Here -->
-        <div class="skills_div borders">
+        <div id="skills_div" class="skills_div borders">
             <h1>
                 Skills
                 <hr>
@@ -736,7 +911,7 @@
                         <img src="{{url_for('static',filename = 'images/jslogo.png')}}" alt="">
                     </div>
                     <p>
-                        PavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in
+                        JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in
                         objects, and methods.
                     </p>
                     <div style="width: 130px ;margin: auto;" class="btn_div borders">
@@ -754,7 +929,7 @@
 
 
         <!-- Footer Starts Here -->
-        <div class="contact_me_footer borders">
+        <div id="contact_me" class="contact_me_footer borders">
             <div class="info_contacts borders">
                 <h1>Lets Start A Project Together
                     <hr width="50%">
@@ -771,7 +946,8 @@
                 <div class="info_contacts_1 borders">
                     <img height="50px" src="{{url_for('static',filename='images/linkedin.webp')}}" alt="">
                     <div class="info_c_t borders">
-                        <a href="https://www.linkedin.com/in/sricharan-sai-krishna-phani-koppula-a13204112/">LinkedIn Profile</a>
+                        <a href="https://www.linkedin.com/in/sricharan-sai-krishna-phani-koppula-a13204112/">LinkedIn
+                            Profile</a>
                     </div>
                 </div>
                 <!-- Info Contacts Starts Here -->
@@ -784,13 +960,13 @@
                 </div>
                 <!-- Info Contacts Starts Here -->
                 <div style="text-align: center; font-family: 'Merriweather';">
-                <h3>Contact Info:</h3>
-                <p style="color: grey;">
-                    Email : charansri595@gmail.com<br>
-                    Mobile : 6304317073 <br>
+                    <h3>Contact Info:</h3>
+                    <p style="color: grey;">
+                        Email : charansri595@gmail.com<br>
+                        Mobile : 6304317073 <br>
 
-                </p>
-            </div>
+                    </p>
+                </div>
             </div>
 
             <div class="contacts_form borders">
